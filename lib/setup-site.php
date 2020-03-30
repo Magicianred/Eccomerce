@@ -1,5 +1,4 @@
 <?php
-
 date_default_timezone_set('America/Sao_Paulo');
 
 class Site
@@ -16,7 +15,7 @@ class Site
     public function setData()
     {
         $this->data = date("m/d/y");
-        $this->hora = date("H:i");
+        $this->hora = date("H:i:s");
     }
 
     public function getNome()

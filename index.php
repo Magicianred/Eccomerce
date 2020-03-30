@@ -1,6 +1,8 @@
-<?php include './lib/setup-site.php';
+<?php 
 
-$mercantiba->setData();
+include './lib/setup-site.php'; $mercantiba->setData();
+include './controller/inicio.php';
+
 ?>
 
 <html>
@@ -14,9 +16,18 @@ $mercantiba->setData();
             </h1>
 
             <menu>
-                <a href="./view/novoUsuario.php">Registrar-se</a>
+                <a href="./?mode=registro">Registrar-se</a>
+                <a href="./?mode=login">Login</a>
             </menu>
 
+            <article>
+              <?php  
+                if($url != NULL){
+                    require $url;
+                }
+                
+              ?>
+            </article>
 
             <body>
 
